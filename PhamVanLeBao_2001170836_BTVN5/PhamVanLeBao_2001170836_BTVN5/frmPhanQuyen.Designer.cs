@@ -32,22 +32,22 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPhanQuyen));
             this.btnLuu = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.ql_NhomNguoiDungDataGridView = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dataTable2DataGridView = new System.Windows.Forms.DataGridView();
             this.ql_NhomNguoiDungBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.ql_NhomNguoiDungBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.ql_NhomNguoiDungDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataTable2DataGridView = new System.Windows.Forms.DataGridView();
             this.ql_NhomNguoiDungBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new PhamVanLeBao_2001170836_BTVN5.DataSet1();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,11 +61,11 @@
             this.tableAdapterManager = new PhamVanLeBao_2001170836_BTVN5.DataSet1TableAdapters.TableAdapterManager();
             this.dataTable2TableAdapter = new PhamVanLeBao_2001170836_BTVN5.DataSet1TableAdapters.DataTable2TableAdapter();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ql_NhomNguoiDungDataGridView)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable2DataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ql_NhomNguoiDungBindingNavigator)).BeginInit();
             this.ql_NhomNguoiDungBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ql_NhomNguoiDungDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTable2DataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ql_NhomNguoiDungBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable2BindingSource)).BeginInit();
@@ -79,26 +79,60 @@
             this.btnLuu.TabIndex = 0;
             this.btnLuu.Text = "Luu";
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.ql_NhomNguoiDungDataGridView);
             this.groupBox1.Location = new System.Drawing.Point(38, 137);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(401, 341);
+            this.groupBox1.Size = new System.Drawing.Size(423, 341);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh Sach Nhom Nguoi Dung";
+            // 
+            // ql_NhomNguoiDungDataGridView
+            // 
+            this.ql_NhomNguoiDungDataGridView.AutoGenerateColumns = false;
+            this.ql_NhomNguoiDungDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ql_NhomNguoiDungDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3});
+            this.ql_NhomNguoiDungDataGridView.DataSource = this.ql_NhomNguoiDungBindingSource;
+            this.ql_NhomNguoiDungDataGridView.Location = new System.Drawing.Point(4, 44);
+            this.ql_NhomNguoiDungDataGridView.Name = "ql_NhomNguoiDungDataGridView";
+            this.ql_NhomNguoiDungDataGridView.RowHeadersWidth = 51;
+            this.ql_NhomNguoiDungDataGridView.RowTemplate.Height = 24;
+            this.ql_NhomNguoiDungDataGridView.Size = new System.Drawing.Size(425, 291);
+            this.ql_NhomNguoiDungDataGridView.TabIndex = 0;
+            this.ql_NhomNguoiDungDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ql_NhomNguoiDungDataGridView_CellClick);
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dataTable2DataGridView);
             this.groupBox2.Location = new System.Drawing.Point(467, 137);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(439, 351);
+            this.groupBox2.Size = new System.Drawing.Size(662, 450);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Danh Sach Quyen Chuc Nang";
+            // 
+            // dataTable2DataGridView
+            // 
+            this.dataTable2DataGridView.AutoGenerateColumns = false;
+            this.dataTable2DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataTable2DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6});
+            this.dataTable2DataGridView.DataSource = this.dataTable2BindingSource;
+            this.dataTable2DataGridView.Location = new System.Drawing.Point(6, 44);
+            this.dataTable2DataGridView.Name = "dataTable2DataGridView";
+            this.dataTable2DataGridView.RowHeadersWidth = 51;
+            this.dataTable2DataGridView.RowTemplate.Height = 24;
+            this.dataTable2DataGridView.Size = new System.Drawing.Size(590, 353);
+            this.dataTable2DataGridView.TabIndex = 0;
             // 
             // ql_NhomNguoiDungBindingNavigator
             // 
@@ -130,6 +164,31 @@
             this.ql_NhomNguoiDungBindingNavigator.Size = new System.Drawing.Size(1279, 27);
             this.ql_NhomNguoiDungBindingNavigator.TabIndex = 3;
             this.ql_NhomNguoiDungBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -164,16 +223,9 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem
@@ -196,26 +248,8 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // ql_NhomNguoiDungBindingNavigatorSaveItem
             // 
@@ -225,39 +259,6 @@
             this.ql_NhomNguoiDungBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 24);
             this.ql_NhomNguoiDungBindingNavigatorSaveItem.Text = "Save Data";
             this.ql_NhomNguoiDungBindingNavigatorSaveItem.Click += new System.EventHandler(this.ql_NhomNguoiDungBindingNavigatorSaveItem_Click);
-            // 
-            // ql_NhomNguoiDungDataGridView
-            // 
-            this.ql_NhomNguoiDungDataGridView.AutoGenerateColumns = false;
-            this.ql_NhomNguoiDungDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ql_NhomNguoiDungDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3});
-            this.ql_NhomNguoiDungDataGridView.DataSource = this.ql_NhomNguoiDungBindingSource;
-            this.ql_NhomNguoiDungDataGridView.Location = new System.Drawing.Point(6, 50);
-            this.ql_NhomNguoiDungDataGridView.Name = "ql_NhomNguoiDungDataGridView";
-            this.ql_NhomNguoiDungDataGridView.RowHeadersWidth = 51;
-            this.ql_NhomNguoiDungDataGridView.RowTemplate.Height = 24;
-            this.ql_NhomNguoiDungDataGridView.Size = new System.Drawing.Size(395, 291);
-            this.ql_NhomNguoiDungDataGridView.TabIndex = 0;
-            this.ql_NhomNguoiDungDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ql_NhomNguoiDungDataGridView_CellClick);
-            // 
-            // dataTable2DataGridView
-            // 
-            this.dataTable2DataGridView.AutoGenerateColumns = false;
-            this.dataTable2DataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataTable2DataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6});
-            this.dataTable2DataGridView.DataSource = this.dataTable2BindingSource;
-            this.dataTable2DataGridView.Location = new System.Drawing.Point(6, 50);
-            this.dataTable2DataGridView.Name = "dataTable2DataGridView";
-            this.dataTable2DataGridView.RowHeadersWidth = 51;
-            this.dataTable2DataGridView.RowTemplate.Height = 24;
-            this.dataTable2DataGridView.Size = new System.Drawing.Size(413, 295);
-            this.dataTable2DataGridView.TabIndex = 0;
             // 
             // ql_NhomNguoiDungBindingSource
             // 
@@ -344,7 +345,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1279, 508);
+            this.ClientSize = new System.Drawing.Size(1279, 736);
             this.Controls.Add(this.ql_NhomNguoiDungBindingNavigator);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -353,12 +354,12 @@
             this.Text = "frmPhanQuyen";
             this.Load += new System.EventHandler(this.frmPhanQuyen_Load);
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ql_NhomNguoiDungDataGridView)).EndInit();
             this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataTable2DataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ql_NhomNguoiDungBindingNavigator)).EndInit();
             this.ql_NhomNguoiDungBindingNavigator.ResumeLayout(false);
             this.ql_NhomNguoiDungBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ql_NhomNguoiDungDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataTable2DataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ql_NhomNguoiDungBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable2BindingSource)).EndInit();

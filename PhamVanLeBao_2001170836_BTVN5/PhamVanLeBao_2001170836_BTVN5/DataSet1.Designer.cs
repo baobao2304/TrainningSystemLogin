@@ -5839,7 +5839,7 @@ WHERE  (ql_NguoiDungNhomNguoiDung.MaNhomNguoiDung = @MaNhomNguoiDung)";
             this._commandCollection[1].Connection = this.Connection;
             this._commandCollection[1].CommandText = "SELECT DM_ManHinh.MaManHinh, DM_ManHinh.TenManHinh, ql_PhanQuyen.CoQuyen\r\nFROM   " +
                 "  DM_ManHinh INNER JOIN\r\n                  ql_PhanQuyen ON DM_ManHinh.MaManHinh " +
-                "= ql_PhanQuyen.MaManHinh\r\nWHERE  (ql_PhanQuyen.Manhomnguoidung = @manhom)";
+                "= ql_PhanQuyen.MaManHinh\r\nWHERE  (ql_PhanQuyen.MaNhomNguoiDung = @manhom)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@manhom", global::System.Data.SqlDbType.Char, 50, global::System.Data.ParameterDirection.Input, 0, 0, "MaNhomNguoiDung", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }

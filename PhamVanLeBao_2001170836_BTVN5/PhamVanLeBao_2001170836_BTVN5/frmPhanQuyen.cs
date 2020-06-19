@@ -34,6 +34,12 @@ namespace PhamVanLeBao_2001170836_BTVN5
 
         }
         string lb11, lb22, lb33;
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void ql_NhomNguoiDungDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             DataGridViewRow row1;
@@ -45,7 +51,7 @@ namespace PhamVanLeBao_2001170836_BTVN5
                 lb33 = row1.Cells[2].Value.ToString();
 
             }
-            this.dataTable2TableAdapter.FillBy(dataSet1.DataTable2, lb11);
+            this.dataTable2TableAdapter.FillBy(dataSet1.DataTable2, lb11.Trim());
         }
     }
 }
